@@ -20,7 +20,7 @@ node {
   
     stage('deploy') {
       def resourceGroup = 'ICT-DevToolWG'
-      def webAppName = ' ICT-DevToolWG-sampleApp'
+      def webAppName = 'ICT-DevToolWG-sampleApp'
       // login Azure
       withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
        sh '''
